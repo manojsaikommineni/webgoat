@@ -10,6 +10,7 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
+  runs-on: ubuntu-latest
   build:
     steps:
       - uses: actions/checkout@v3
