@@ -1,8 +1,9 @@
 name: checkout
-on: [push]
+on: [push, pull_request]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
       -name: Checkout
+       run: ls-l 
       - uses: actions/checkout@v4
