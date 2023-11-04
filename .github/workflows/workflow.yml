@@ -1,9 +1,25 @@
-name: checkout
-on: [push, pull_request]
+name: First
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main", "Develop" ]
+  pull_request:
+    branches: [ "main", "Develop" ]
+
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+  # This workflow contains a single job called "build"
+  build:
     steps:
-      -name: Checkout
-        run: ls-l 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
