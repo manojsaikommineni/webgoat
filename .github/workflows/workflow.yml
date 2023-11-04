@@ -2,7 +2,7 @@
 name: checkout
 on: [push, pull_request]
 jobs:
-  runs-on: ubuntu-latest
+  #runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v3
     - name: Run a one-line script
