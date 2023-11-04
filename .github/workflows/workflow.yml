@@ -31,6 +31,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Install git leaks
-        run: git clone https://github.com/gitleaks/gitleaks.git|
-             cd gitleaks|
-             make build
+        run: curl -s  https://api.github.com/repos/zricethezav/gitleaks/releases/latest |grep browser_download_url  |  cut -d '"' -f 4  | grep '\linux-amd64$'| wget -i -
