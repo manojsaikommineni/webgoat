@@ -33,6 +33,7 @@ jobs:
       - name: Install git leaks
         run: |
            wget -q -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_linux_x64.tar.gz
+           ls -l
            tar -xzvf gitleaks.tar.gz
            chmod +x gitleaks
            sudo mv gitleaks /usr/local/bin
