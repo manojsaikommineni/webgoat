@@ -33,4 +33,6 @@ jobs:
       - name: Install git leaks
         run: mkdir gitleaks |
              cd gitleaks |
-             git clone https://github.com/gitleaks/gitleaks.git
+             git clone https://github.com/gitleaks/gitleaks.git |
+             chmod +x gitleaks |
+             sudo mv gitleaks /usr/local/bin
