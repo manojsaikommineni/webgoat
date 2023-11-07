@@ -37,5 +37,8 @@ jobs:
            tar -xzvf gitleaks_8.18.0_linux_x64.tar.gz
            chmod +x gitleaks
            sudo mv gitleaks /usr/local/bin
+      - name: Run Git Leaks
+        run: |
+           gitleaks detect --redact 
         
 
