@@ -31,9 +31,10 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Install git leaks
-        run: wget -q -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_windows_x64.zip
-             tar -xzvf gitleaks.tar.gz
-             chmod +x gitleaks
-             sudo mv gitleaks /usr/local/bin
+        run: |
+           wget -q -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.18.0/gitleaks_8.18.0_windows_x64.zip
+           tar -xzvf gitleaks.tar.gz
+           chmod +x gitleaks
+           sudo mv gitleaks /usr/local/bin
         
 
